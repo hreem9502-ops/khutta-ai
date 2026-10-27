@@ -101,3 +101,44 @@ async def test_service_without_ai_returns_rule_result(cs_plan, make_pdf):
     result = await TranscriptService(None).parse(make_pdf(GRADE_FIRST), cs_plan)
 
     assert result.reader is TranscriptReader.RULES
+
+
+def test_select_course_lines_keeps_title_only_and_gpa_lines_when_plan_supplied(cs_plan):
+    lines = [
+        "Student Name: Sample Student",
+        "Introduction to Computing   A",
+        "Cumulative GPA: 4.25",
+        "Random footer note",
+    ]
+
+    assert select_course_lines(lines, cs_plan) == [
+        "Introduction to Computing   A",
+        "Cumulative GPA: 4.25",
+    ]
+
+
+async def test_service_switches_to_fallback_plan_via_rules_before_calling_ai(repository, make_pdf):
+    cs_plan = repository.get("cs")
+    net_plan = repository.get("net")
+    client = FakeJsonClient(AI_ANSWER)
+
+    # CS transcript uploaded while "net" is selected: rules on fallback_plans detect CS without AI.
+    result = await TranscriptService(AITranscriptReader(client)).parse(
+        make_pdf(STANDARD), net_plan, fallback_plans=[cs_plan, net_plan]
+    )
+
+    assert result.department == "cs"
+    assert result.reader is TranscriptReader.RULES
+    assert client.calls == []
+
+
+async def test_service_reads_scanned_pdf_via_ai_vision(cs_plan, blank_pdf):
+    client = FakeJsonClient(AI_ANSWER | {"gpa": 3.65})
+    service = TranscriptService(AITranscriptReader(client))
+
+    result = await service.parse(blank_pdf, cs_plan)
+
+    assert result.reader is TranscriptReader.AI
+    assert result.gpa == 3.65
+    assert {c.code for c in result.courses if c.status is CourseStatus.PASSED} == {"CS 101", "CS 102", "MATH 101"}
+    assert client.calls[0]["pdf_bytes"] == len(blank_pdf)

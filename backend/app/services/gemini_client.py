@@ -54,6 +54,16 @@ class GeminiJsonClient:
         Raises:
             AIServiceError: the call failed, timed out, or returned an unusable response.
         """
+        return await self._call(system_prompt=system_prompt, contents=contents, schema=schema)
+
+    async def generate_from_pdf(
+        self, *, system_prompt: str, pdf_bytes: bytes, prompt: str, schema: type[SchemaT]
+    ) -> SchemaT:
+        """Read a PDF document directly (including scanned/image PDFs) into ``schema``."""
+        contents = [types.Part.from_bytes(data=pdf_bytes, mime_type="application/pdf"), prompt]
+        return await self._call(system_prompt=system_prompt, contents=contents, schema=schema)
+
+    async def _call(self, *, system_prompt: str, contents: object, schema: type[SchemaT]) -> SchemaT:
         config = types.GenerateContentConfig(
             system_instruction=system_prompt,
             response_mime_type="application/json",

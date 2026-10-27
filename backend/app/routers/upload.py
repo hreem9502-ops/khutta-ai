@@ -6,10 +6,10 @@ from fastapi import APIRouter, Depends, File, Form, UploadFile
 
 from app.config import Settings, get_settings
 from app.dependencies import get_plan_repository, get_transcript_service
-from app.uploads import read_upload
 from app.models.student import ParsedTranscript
 from app.services.plan_repository import PlanRepository
 from app.services.transcript_service import TranscriptService
+from app.uploads import read_upload
 
 router = APIRouter(prefix="/transcripts", tags=["transcripts"])
 
@@ -29,13 +29,6 @@ async def parse_transcript(
     read by the model instead; ``reader`` in the response says which one was used.
     """
     plan = plans.get(department)
+    all_plans = [plans.get(summary.code) for summary in plans.list_departments()]
     data = await read_upload(file, settings.max_upload_bytes)
-    result = await transcripts.parse(data, plan)
-    if not result.courses:
-        for summary in plans.list_departments():
-            if summary.code == plan.code:
-                continue
-            candidate = await transcripts.parse(data, plans.get(summary.code))
-            if len(candidate.courses) > len(result.courses):
-                result = candidate
-    return result
+    return await transcripts.parse(data, plan, fallback_plans=all_plans)

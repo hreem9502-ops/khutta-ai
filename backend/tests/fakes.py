@@ -16,3 +16,9 @@ class FakeJsonClient:
         if self.error:
             raise self.error
         return schema.model_validate(self.answer)
+
+    async def generate_from_pdf(self, *, system_prompt: str, pdf_bytes: bytes, prompt: str, schema):
+        self.calls.append({"system_prompt": system_prompt, "pdf_bytes": len(pdf_bytes), "prompt": prompt})
+        if self.error:
+            raise self.error
+        return schema.model_validate(self.answer)
