@@ -25,7 +25,7 @@ def extract_text_lines(data: bytes) -> list[str]:
     try:
         with pdfplumber.open(io.BytesIO(data)) as pdf:
             pages = pdf.pages[:MAX_PAGES]
-            texts = [page.extract_text() or "" for page in pages]
+            texts = [page.extract_text(y_tolerance=8) or "" for page in pages]
     except (PdfminerException, ValueError) as error:
         raise InvalidTranscriptError("PDF could not be opened") from error
 

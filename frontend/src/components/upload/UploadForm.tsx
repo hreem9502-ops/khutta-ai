@@ -68,7 +68,7 @@ export function UploadForm() {
     setSubmitting(true);
     try {
       const parsed = await parseTranscript(file, selection.department);
-      start({ ...selection, courses: parsed.courses, gpa: parsed.gpa, reader: parsed.reader });
+      start({ department: parsed.department || selection.department, term: selection.term, courses: parsed.courses, gpa: parsed.gpa, reader: parsed.reader });
       router.push("/review");
     } catch (caught) {
       setError(describeError(caught));

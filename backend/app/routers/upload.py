@@ -30,4 +30,12 @@ async def parse_transcript(
     """
     plan = plans.get(department)
     data = await read_upload(file, settings.max_upload_bytes)
-    return await transcripts.parse(data, plan)
+    result = await transcripts.parse(data, plan)
+    if not result.courses:
+        for summary in plans.list_departments():
+            if summary.code == plan.code:
+                continue
+            candidate = await transcripts.parse(data, plans.get(summary.code))
+            if len(candidate.courses) > len(result.courses):
+                result = candidate
+    return result

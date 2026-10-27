@@ -81,6 +81,8 @@ def _read_course_line(line: str, plan: StudyPlan) -> TranscriptCourse | None:
         if code is None:
             continue
         grade = _find_grade(line[match.end() :].split())
+        if grade is None:
+            grade = _find_grade(list(reversed(line[: match.start()].split())))
         return TranscriptCourse(code=code, grade=grade, status=status_for_grade(grade))
     return None
 
