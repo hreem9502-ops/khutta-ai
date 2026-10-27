@@ -1,0 +1,65 @@
+{
+  "code": "cs",
+  "name": {
+    "ar": "علوم الحاسب",
+    "en": "Computer Science"
+  },
+  "total_hours": 112,
+  "elective_hours_required": 12,
+  "rules": {
+    "gpa_scale": 4.0,
+    "min_hours": 12,
+    "default_max_hours": 18,
+    "high_gpa": {
+      "threshold": 3.5,
+      "max_hours": 21
+    },
+    "low_gpa": {
+      "threshold": 2.0,
+      "max_hours": 14
+    }
+  },
+  "courses": [
+    {"code": "CS 101", "name": {"ar": "مقدمة في الحاسب", "en": "Introduction to Computing"}, "credit_hours": 3, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 102", "name": {"ar": "برمجة 1", "en": "Programming 1"}, "credit_hours": 4, "level": 1, "type": "required", "category": "mixed", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ENG 101", "name": {"ar": "لغة إنجليزية 1", "en": "English 1"}, "credit_hours": 3, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ISL 101", "name": {"ar": "الثقافة الإسلامية 1", "en": "Islamic Culture 1"}, "credit_hours": 2, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "MATH 101", "name": {"ar": "التفاضل والتكامل", "en": "Calculus"}, "credit_hours": 3, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ARB 101", "name": {"ar": "مهارات لغوية", "en": "Arabic Language Skills"}, "credit_hours": 2, "level": 2, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 201", "name": {"ar": "برمجة 2", "en": "Programming 2"}, "credit_hours": 4, "level": 2, "type": "required", "category": "mixed", "prerequisites": ["CS 102"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 202", "name": {"ar": "الرياضيات المتقطعة", "en": "Discrete Structures"}, "credit_hours": 3, "level": 2, "type": "required", "category": "theoretical", "prerequisites": ["MATH 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ENG 102", "name": {"ar": "لغة إنجليزية 2", "en": "English 2"}, "credit_hours": 3, "level": 2, "type": "required", "category": "theoretical", "prerequisites": ["ENG 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "MATH 201", "name": {"ar": "الجبر الخطي", "en": "Linear Algebra"}, "credit_hours": 3, "level": 2, "type": "required", "category": "theoretical", "prerequisites": ["MATH 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 301", "name": {"ar": "هياكل البيانات", "en": "Data Structures"}, "credit_hours": 3, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["CS 201", "CS 202"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 302", "name": {"ar": "تنظيم الحاسب", "en": "Computer Organization"}, "credit_hours": 3, "level": 3, "type": "required", "category": "theoretical", "prerequisites": ["CS 202"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 303", "name": {"ar": "البرمجة كائنية التوجه", "en": "Object-Oriented Design"}, "credit_hours": 3, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["CS 201"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ISL 201", "name": {"ar": "الثقافة الإسلامية 2", "en": "Islamic Culture 2"}, "credit_hours": 2, "level": 3, "type": "required", "category": "theoretical", "prerequisites": ["ISL 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "STAT 301", "name": {"ar": "الاحتمالات والإحصاء", "en": "Probability and Statistics"}, "credit_hours": 3, "level": 3, "type": "required", "category": "theoretical", "prerequisites": ["MATH 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 401", "name": {"ar": "تصميم الخوارزميات", "en": "Algorithms"}, "credit_hours": 3, "level": 4, "type": "required", "category": "theoretical", "prerequisites": ["CS 301"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 402", "name": {"ar": "نظم التشغيل", "en": "Operating Systems"}, "credit_hours": 3, "level": 4, "type": "required", "category": "mixed", "prerequisites": ["CS 301", "CS 302"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 403", "name": {"ar": "نظم قواعد البيانات", "en": "Database Systems"}, "credit_hours": 3, "level": 4, "type": "required", "category": "mixed", "prerequisites": ["CS 301"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 404", "name": {"ar": "شبكات الحاسب", "en": "Computer Networks"}, "credit_hours": 3, "level": 4, "type": "required", "category": "theoretical", "prerequisites": ["CS 302"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "ENG 201", "name": {"ar": "الكتابة التقنية", "en": "Technical Writing"}, "credit_hours": 2, "level": 4, "type": "required", "category": "theoretical", "prerequisites": ["ENG 102"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "CS 501", "name": {"ar": "هندسة البرمجيات", "en": "Software Engineering"}, "credit_hours": 3, "level": 5, "type": "required", "category": "mixed", "prerequisites": ["CS 303", "CS 403"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 502", "name": {"ar": "تطوير تطبيقات الويب", "en": "Web Application Development"}, "credit_hours": 3, "level": 5, "type": "required", "category": "practical", "prerequisites": ["CS 403"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 503", "name": {"ar": "نظرية الحوسبة", "en": "Theory of Computation"}, "credit_hours": 3, "level": 5, "type": "required", "category": "theoretical", "prerequisites": ["CS 401"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 504", "name": {"ar": "الذكاء الاصطناعي", "en": "Artificial Intelligence"}, "credit_hours": 3, "level": 5, "type": "required", "category": "theoretical", "prerequisites": ["CS 401", "STAT 301"], "corequisites": [], "terms": ["fall"]},
+    {"code": "ISL 301", "name": {"ar": "الثقافة الإسلامية 3", "en": "Islamic Culture 3"}, "credit_hours": 2, "level": 5, "type": "required", "category": "theoretical", "prerequisites": ["ISL 201"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 601", "name": {"ar": "المترجمات", "en": "Compilers"}, "credit_hours": 3, "level": 6, "type": "required", "category": "mixed", "prerequisites": ["CS 503"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 602", "name": {"ar": "أمن المعلومات", "en": "Information Security"}, "credit_hours": 3, "level": 6, "type": "required", "category": "theoretical", "prerequisites": ["CS 404"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 603", "name": {"ar": "تعلم الآلة", "en": "Machine Learning"}, "credit_hours": 3, "level": 6, "type": "required", "category": "mixed", "prerequisites": ["CS 504", "MATH 201"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 604", "name": {"ar": "تطوير تطبيقات الجوال", "en": "Mobile Application Development"}, "credit_hours": 3, "level": 6, "type": "required", "category": "practical", "prerequisites": ["CS 502"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 510", "name": {"ar": "رسوميات الحاسب", "en": "Computer Graphics"}, "credit_hours": 3, "level": 6, "type": "elective", "category": "mixed", "prerequisites": ["CS 301", "MATH 201"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 520", "name": {"ar": "تنقيب البيانات", "en": "Data Mining"}, "credit_hours": 3, "level": 6, "type": "elective", "category": "mixed", "prerequisites": ["CS 403", "STAT 301"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 530", "name": {"ar": "الحوسبة السحابية", "en": "Cloud Computing"}, "credit_hours": 3, "level": 6, "type": "elective", "category": "mixed", "prerequisites": ["CS 404"], "corequisites": [], "terms": ["spring"]},
+    {"code": "CS 701", "name": {"ar": "مشروع التخرج 1", "en": "Graduation Project 1"}, "credit_hours": 2, "level": 7, "type": "required", "category": "practical", "prerequisites": ["CS 501"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 702", "name": {"ar": "النظم الموزعة", "en": "Distributed Systems"}, "credit_hours": 3, "level": 7, "type": "required", "category": "theoretical", "prerequisites": ["CS 402", "CS 404"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 703", "name": {"ar": "التفاعل بين الإنسان والحاسب", "en": "Human-Computer Interaction"}, "credit_hours": 3, "level": 7, "type": "required", "category": "mixed", "prerequisites": ["CS 501"], "corequisites": [], "terms": ["fall"]},
+    {"code": "ISL 401", "name": {"ar": "الثقافة الإسلامية 4", "en": "Islamic Culture 4"}, "credit_hours": 2, "level": 7, "type": "required", "category": "theoretical", "prerequisites": ["ISL 301"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 540", "name": {"ar": "معالجة اللغات الطبيعية", "en": "Natural Language Processing"}, "credit_hours": 3, "level": 7, "type": "elective", "category": "mixed", "prerequisites": ["CS 504"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 550", "name": {"ar": "النظم المدمجة", "en": "Embedded Systems"}, "credit_hours": 3, "level": 7, "type": "elective", "category": "practical", "prerequisites": ["CS 302"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 560", "name": {"ar": "مواضيع مختارة في الأمن السيبراني", "en": "Selected Topics in Cybersecurity"}, "credit_hours": 3, "level": 7, "type": "elective", "category": "theoretical", "prerequisites": ["CS 602"], "corequisites": [], "terms": ["fall"]},
+    {"code": "CS 801", "name": {"ar": "مشروع التخرج 2", "en": "Graduation Project 2"}, "credit_hours": 4, "level": 8, "type": "required", "category": "practical", "prerequisites": ["CS 701"], "corequisites": [], "terms": ["spring"]},
+    {"code": "ETH 801", "name": {"ar": "أخلاقيات المهنة", "en": "Professional Ethics"}, "credit_hours": 2, "level": 8, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["spring"]}
+  ]
+}

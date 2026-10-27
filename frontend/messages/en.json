@@ -1,0 +1,246 @@
+{
+  "Common": {
+    "appName": "Khutta",
+    "tagline": "Academic registration assistant",
+    "description": "Suggests next term's schedule from your transcript and your study plan's requirements.",
+    "retry": "Try again",
+    "hours": "{hours, plural, one {# hour} other {# hours}}"
+  },
+  "Nav": {
+    "label": "Main navigation",
+    "menu": "Menu",
+    "home": "Home",
+    "start": "Get started",
+    "plan": "Study plans",
+    "about": "About",
+    "switchLanguage": "التبديل إلى العربية",
+    "toggleTheme": "Toggle theme"
+  },
+  "Footer": {
+    "label": "More links",
+    "privacy": "Uploaded transcripts are never stored.",
+    "admin": "Manage plans"
+  },
+  "Home": {
+    "title": "Plan next term with confidence",
+    "lead": "Upload your transcript, confirm the courses you have finished, and get a suggested schedule that respects your department's prerequisites and credit-hour limits.",
+    "start": "Get started",
+    "learnMore": "How it works",
+    "previewCaption": "Sample output",
+    "previewTerm": "Fall term",
+    "stepsTitle": "How it works",
+    "steps": {
+      "upload": {
+        "title": "Upload your transcript",
+        "body": "We read the PDF and pick out the courses you have completed."
+      },
+      "review": {
+        "title": "Review what we found",
+        "body": "Correct anything we misread before going on."
+      },
+      "verify": {
+        "title": "Prerequisites are checked",
+        "body": "Courses with unmet prerequisites, or not offered this term, are removed."
+      },
+      "schedule": {
+        "title": "Get your schedule",
+        "body": "AI ranks the remaining courses and explains each choice."
+      }
+    },
+    "split": {
+      "title": "What the rules decide, and what AI suggests",
+      "lead": "Eligibility is never left to judgement. Fixed rules decide what you may register for, and the AI chooses only from that list.",
+      "rulesTitle": "Checked by fixed rules",
+      "rules": [
+        "Prerequisites and corequisites",
+        "Courses offered this term",
+        "Minimum and maximum credit hours for your GPA",
+        "Remaining elective hours"
+      ],
+      "aiTitle": "Suggested by AI",
+      "ai": [
+        "Ranking eligible courses by importance to your plan",
+        "Balancing the workload using your previous grades",
+        "Explaining why each course was chosen"
+      ],
+      "note": "Every suggestion is re-checked against the same rules before you see it, so an ineligible course cannot reach your schedule."
+    }
+  },
+  "Flow": {
+    "upload": "Upload",
+    "review": "Review courses",
+    "results": "Schedule",
+    "label": "Schedule steps"
+  },
+  "Terms": {
+    "fall": "Fall term",
+    "spring": "Spring term"
+  },
+  "Upload": {
+    "title": "Start with your transcript",
+    "description": "Choose your department and the upcoming term, then upload your transcript as a PDF.",
+    "department": "Department",
+    "selectDepartment": "Select department",
+    "term": "Upcoming term",
+    "selectTerm": "Select term",
+    "dropTitle": "Drag your transcript here",
+    "dropHint": "or click to browse · PDF only · up to 4 MB",
+    "remove": "Remove file",
+    "submit": "Read transcript",
+    "submitting": "Reading transcript…",
+    "manual": "No PDF? I'll select my courses manually",
+    "privacy": "The file is processed in memory and never stored. No personal data is sent to the AI; lines with your name or student ID are removed.",
+    "needDepartment": "Select a department first.",
+    "needTerm": "Select a term first.",
+    "needFile": "Choose your transcript file or select your courses manually.",
+    "departmentsFailed": "Could not load the list of departments."
+  },
+  "Review": {
+    "title": "Review your courses",
+    "description": "Set the status of each course. This is what decides which courses you may register for, so check it carefully.",
+    "detected": "Courses read from your transcript: {count}",
+    "noneDetected": "We could not recognise any course in the file. Select your courses manually below.",
+    "gpa": "Cumulative GPA (optional)",
+    "gpaHint": "Sets your maximum credit-hour load.",
+    "level": "Level {level}",
+    "electives": "Electives",
+    "electivesHint": "{hours} elective hours are required.",
+    "fromTranscript": "From transcript",
+    "grade": "Grade: {grade}",
+    "failed": "Failed ({grade})",
+    "status": {
+      "passed": "Passed",
+      "in_progress": "In progress",
+      "none": "Not taken"
+    },
+    "statusLabel": "Status of {code}",
+    "summary": "Passed: {passed} · In progress: {inProgress}",
+    "generate": "Suggest schedule",
+    "generating": "Building your schedule…",
+    "back": "Back",
+    "aiRead": "Your transcript's layout did not match the usual rules, so it was read with AI help. Check every course and grade carefully before continuing."
+  },
+  "Results": {
+    "title": "Suggested schedule",
+    "description": "{term}. Courses are ordered by priority.",
+    "hoursLabel": "Suggested hours",
+    "hoursValue": "{total} of {max}",
+    "hoursRange": "Allowed: {min} to {max} hours",
+    "progressLabel": "Plan progress",
+    "progressDetail": "{completed} of {total} hours",
+    "remainingLabel": "Required courses left",
+    "course": "Course",
+    "priority": "Priority",
+    "why": "Why",
+    "priorities": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "types": {
+      "required": "Required",
+      "elective": "Elective"
+    },
+    "summaryTitle": "Summary",
+    "source": {
+      "ai": "Ranked and explained by AI, then checked against the rules.",
+      "rules": "Ranked by rules only; the AI advisor was not available."
+    },
+    "warningsTitle": "Notes",
+    "blockedTitle": "Not available to you yet",
+    "blockedDescription": "These courses need prerequisites you have not passed yet.",
+    "needs": "Needs: {codes}",
+    "empty": "No courses are available to you this term. Please see your academic advisor.",
+    "edit": "Edit courses",
+    "print": "Print or save as PDF",
+    "startOver": "Start over",
+    "disclaimer": "Suggestions are advisory. Your academic advisor and the official registration system have the final say.",
+    "levelBadge": "Level {level}"
+  },
+  "Plan": {
+    "title": "Study plans",
+    "description": "Each level's courses with their prerequisites.",
+    "department": "Department",
+    "level": "Level {level}",
+    "requires": "Requires: {codes}",
+    "noRequirements": "No prerequisites",
+    "electives": "Electives",
+    "electivesHint": "Students choose {hours} credit hours from these courses.",
+    "total": "Total plan hours: {hours}",
+    "sample": "The plans shown are samples and should be replaced with the college's approved plan.",
+    "code": "Code",
+    "course": "Course",
+    "prerequisites": "Prerequisites",
+    "hoursHeading": "Hours"
+  },
+  "About": {
+    "title": "About",
+    "lead": "An assistant that helps students choose next term's courses, with a clear line between what rules decide and what AI suggests.",
+    "howTitle": "How it works",
+    "how": [
+      "The system reads the transcript text and matches course codes against the department's study plan. You then review and correct the result.",
+      "Fixed rules decide which courses are open to you: prerequisites, courses offered this term, and credit-hour limits for your GPA.",
+      "The AI chooses only from those courses, ranks them and explains its choice. Its output is checked against the rules again, and if it is unreachable the rules do the ranking."
+    ],
+    "privacyTitle": "Privacy",
+    "privacy": "The transcript is read in memory and is not saved on the server. For the schedule, only course codes, their grades and the cumulative GPA are sent to the AI model. If the transcript's layout does not match the rules, only its course lines are sent to be read, after removing any line with a name, ID or contact detail and masking long numbers.",
+    "limitsTitle": "Limitations",
+    "limits": "Reading a transcript depends on the layout of the PDF, which is why the result is shown for review before anything is suggested. Suggestions are advisory; your academic advisor and the official registration system have the final say."
+  },
+  "Errors": {
+    "network": "Could not reach the server. Make sure it is running and try again.",
+    "generic": "Something went wrong. Please try again.",
+    "department_not_found": "That department is not available.",
+    "unknown_course": "The list included a course that is not in the study plan.",
+    "invalid_pdf": "The file is not a valid PDF.",
+    "no_text_in_pdf": "The file has no readable text; it may be a scanned image. You can select your courses manually.",
+    "file_too_large": "The file is larger than 4 MB.",
+    "notPdf": "Please choose a PDF file.",
+    "unauthorized": "The admin token is wrong.",
+    "admin_disabled": "Admin is not enabled on the server. ADMIN_TOKEN must be set.",
+    "plan_storage_unavailable": "Plans cannot be saved on this server. Connect Upstash Redis to the project and try again."
+  },
+  "Guard": {
+    "noData": "There is nothing to show yet.",
+    "start": "Back to the start"
+  },
+  "Admin": {
+    "title": "Manage study plans",
+    "description": "For college staff: download a department's plan as Excel, edit it, then upload it to check and publish.",
+    "tokenTitle": "Access",
+    "tokenLabel": "Admin token",
+    "tokenHint": "Set by the system administrator as ADMIN_TOKEN on the server.",
+    "downloadTitle": "Download a current plan",
+    "downloadHint": "Start from an existing plan: download it, edit it in Excel, then upload it. To add a department, change the code and names on the plan sheet.",
+    "department": "Department",
+    "downloadButton": "Download Excel file",
+    "uploadTitle": "Upload and check",
+    "dropTitle": "Drag the plan file here",
+    "dropHint": "or click to browse · Excel .xlsx file",
+    "remove": "Remove file",
+    "check": "Check file",
+    "publish": "Publish plan",
+    "needToken": "Enter the admin token first.",
+    "needFile": "Choose the plan file first.",
+    "valid": "The {name} plan is valid and ready to publish.",
+    "published": "The {name} plan is published and available to students now.",
+    "summary": "Courses: {courses} · Levels: {levels} · Total hours: {hours}",
+    "replaceWarning": "Publishing replaces any existing plan with the same code ({code}).",
+    "issuesTitle": "Problems in the file: {count}",
+    "location": "{sheet}, row {row}",
+    "issues": {
+      "invalid_file": "The file is not a valid Excel .xlsx workbook.",
+      "missing_sheet": "The “{sheet}” sheet is missing.",
+      "missing_column": "The “{field}” column is missing.",
+      "missing_value": "“{field}” is empty.",
+      "invalid_number": "“{value}” in “{field}” is not a valid whole number.",
+      "invalid_choice": "“{value}” is not an accepted value for “{field}”.",
+      "invalid_department_code": "Department code “{value}” is invalid. Use lowercase English letters and digits only.",
+      "duplicate_course": "Course code {value} appears more than once.",
+      "unknown_course": "{value}, listed in “{field}”, is not a course in this plan.",
+      "self_reference": "The course lists itself in “{field}”.",
+      "prerequisite_cycle": "This course's prerequisites form a loop that can never be completed.",
+      "invalid_rules": "Invalid value in the plan settings ({field})."
+    }
+  }
+}

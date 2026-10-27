@@ -1,0 +1,39 @@
+{
+  "name": "net_in_progress",
+  "description": "Networks student with current-term courses marked IP or left without a grade.",
+  "department": "net",
+  "term": "spring",
+  "transcript": [
+    "رياض 101 الرياضيات 3 A 4.75",
+    "انجل 101 لغة إنجليزية - 1 3 B 4.00",
+    "حاسب 101 مقدمة تطبيقات الحاسب 2 A+ 5.00",
+    "حاسب 121 تجميع الحاسب وتشغيله 4 B+ 4.50",
+    "شبكا 111 مبادئ شبكات الحاسب 4 A 4.75",
+    "فيزي 101 الفيزياء 3 B 4.00",
+    "انجل 102 لغة إنجليزية (2) 3 IP",
+    "داعم 151 نظم التشغيل - 1 4 IP",
+    "شبكا 121 التوجيه والتحويل - 1 4",
+    "المعدل التراكمي 4.50"
+  ],
+  "expected": {
+    "passed": [
+      "رياض 101",
+      "انجل 101",
+      "حاسب 101",
+      "حاسب 121",
+      "شبكا 111",
+      "فيزي 101"
+    ],
+    "in_progress": [
+      "انجل 102",
+      "داعم 151",
+      "شبكا 121"
+    ],
+    "gpa": 4.5,
+    "failed": []
+  },
+  "tags": [],
+  "advisor_choice": null,
+  "verified_by": null,
+  "note": "TVTC Computer Networks sample transcript."
+}

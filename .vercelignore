@@ -1,0 +1,18 @@
+# Local environments and secrets never leave the machine.
+**/.env
+**/.env.*
+!**/.env.example
+backend/.venv
+frontend/node_modules
+frontend/.next
+frontend/.vercel
+
+# Development-only code: not needed by the deployed functions.
+backend/tests
+backend/evaluation
+backend/requirements-dev.txt
+backend/pytest.ini
+**/__pycache__
+**/.pytest_cache
+**/*.tmp
+.agents

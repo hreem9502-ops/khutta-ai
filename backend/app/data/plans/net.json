@@ -1,0 +1,54 @@
+{
+  "code": "net",
+  "name": {
+    "ar": "تقنية شبكات الحاسب",
+    "en": "Computer Networks Technology"
+  },
+  "total_hours": 77,
+  "elective_hours_required": 0,
+  "rules": {
+    "gpa_scale": 5.0,
+    "min_hours": 12,
+    "default_max_hours": 20,
+    "high_gpa": {
+      "threshold": 4.5,
+      "max_hours": 22
+    },
+    "low_gpa": {
+      "threshold": 2.0,
+      "max_hours": 14
+    }
+  },
+  "courses": [
+    {"code": "رياض 101", "name": {"ar": "الرياضيات", "en": "Mathematics"}, "credit_hours": 3, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "انجل 101", "name": {"ar": "لغة إنجليزية - 1", "en": "English Language 1"}, "credit_hours": 3, "level": 1, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "حاسب 101", "name": {"ar": "مقدمة تطبيقات الحاسب", "en": "Introduction to Computer Applications"}, "credit_hours": 2, "level": 1, "type": "required", "category": "practical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "حاسب 121", "name": {"ar": "تجميع الحاسب وتشغيله", "en": "Computer Assembly and Operation"}, "credit_hours": 4, "level": 1, "type": "required", "category": "mixed", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 111", "name": {"ar": "مبادئ شبكات الحاسب", "en": "Computer Networks Fundamentals"}, "credit_hours": 4, "level": 1, "type": "required", "category": "mixed", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "فيزي 101", "name": {"ar": "الفيزياء", "en": "Physics"}, "credit_hours": 3, "level": 1, "type": "required", "category": "mixed", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+
+    {"code": "انجل 102", "name": {"ar": "لغة إنجليزية (2)", "en": "English Language 2"}, "credit_hours": 3, "level": 2, "type": "required", "category": "theoretical", "prerequisites": ["انجل 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "رياد 101", "name": {"ar": "أساسيات ريادة الأعمال", "en": "Entrepreneurship Fundamentals"}, "credit_hours": 2, "level": 2, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "حاسب 102", "name": {"ar": "تطبيقات الحاسب المتقدمة", "en": "Advanced Computer Applications"}, "credit_hours": 2, "level": 2, "type": "required", "category": "practical", "prerequisites": ["حاسب 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "عربي 101", "name": {"ar": "الكتابة الفنية", "en": "Technical Writing"}, "credit_hours": 2, "level": 2, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "داعم 151", "name": {"ar": "نظم التشغيل - 1", "en": "Operating Systems 1"}, "credit_hours": 4, "level": 2, "type": "required", "category": "mixed", "prerequisites": ["حاسب 121"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 121", "name": {"ar": "التوجيه والتحويل - 1", "en": "Routing and Switching 1"}, "credit_hours": 4, "level": 2, "type": "required", "category": "mixed", "prerequisites": ["شبكا 111"], "corequisites": [], "terms": ["fall", "spring"]},
+
+    {"code": "انجل 103", "name": {"ar": "لغة إنجليزية (3)", "en": "English Language 3"}, "credit_hours": 3, "level": 3, "type": "required", "category": "theoretical", "prerequisites": ["انجل 102"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "رياد 212", "name": {"ar": "ريادة أعمال الحاسب وتقنية المعلومات", "en": "IT Entrepreneurship"}, "credit_hours": 2, "level": 3, "type": "required", "category": "theoretical", "prerequisites": ["رياد 101"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 231", "name": {"ar": "مقدمة في أمن الشبكات", "en": "Introduction to Network Security"}, "credit_hours": 4, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["شبكا 121"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "داعم 252", "name": {"ar": "نظم التشغيل - 2", "en": "Operating Systems 2"}, "credit_hours": 4, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["داعم 151"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 222", "name": {"ar": "التوجيه والتحويل (2)", "en": "Routing and Switching 2"}, "credit_hours": 4, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["شبكا 121"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 285", "name": {"ar": "موضوعات مختارة", "en": "Selected Topics"}, "credit_hours": 3, "level": 3, "type": "required", "category": "mixed", "prerequisites": ["شبكا 121"], "corequisites": [], "terms": ["fall", "spring"]},
+
+    {"code": "انجل 204", "name": {"ar": "لغة إنجليزية (4)", "en": "English Language 4"}, "credit_hours": 3, "level": 4, "type": "required", "category": "theoretical", "prerequisites": ["انجل 103"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "حاسب 280", "name": {"ar": "التأهيل للشهادات الاحترافية", "en": "Professional Certification Preparation"}, "credit_hours": 1, "level": 4, "type": "required", "category": "practical", "prerequisites": ["شبكا 121"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "سلوك 201", "name": {"ar": "السلوك الوظيفي والمستقبل المهني", "en": "Work Ethics and Career Planning"}, "credit_hours": 2, "level": 4, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 232", "name": {"ar": "أمن الشبكات المتقدم", "en": "Advanced Network Security"}, "credit_hours": 3, "level": 4, "type": "required", "category": "mixed", "prerequisites": ["شبكا 231"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "اسلم 101", "name": {"ar": "الثقافة الإسلامية والمجتمعية", "en": "Islamic and Social Culture"}, "credit_hours": 2, "level": 4, "type": "required", "category": "theoretical", "prerequisites": [], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 241", "name": {"ar": "ربط الشبكات", "en": "Connecting Networks"}, "credit_hours": 4, "level": 4, "type": "required", "category": "mixed", "prerequisites": ["شبكا 222"], "corequisites": [], "terms": ["fall", "spring"]},
+    {"code": "شبكا 295", "name": {"ar": "مشروع", "en": "Capstone Project"}, "credit_hours": 2, "level": 4, "type": "required", "category": "practical", "prerequisites": ["شبكا 222"], "corequisites": [], "terms": ["fall", "spring"]},
+
+    {"code": "شبكا 299", "name": {"ar": "التدريب التعاوني", "en": "Cooperative Training"}, "credit_hours": 4, "level": 5, "type": "required", "category": "practical", "prerequisites": ["شبكا 232", "شبكا 241", "شبكا 295"], "corequisites": [], "terms": ["fall", "spring"]}
+  ]
+}

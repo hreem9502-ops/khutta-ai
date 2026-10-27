@@ -1,0 +1,11 @@
+.vercel
+
+# Backend
+backend/.venv/
+backend/.env
+__pycache__/
+.pytest_cache/
+
+.vercel
+.env*
+!.env.example

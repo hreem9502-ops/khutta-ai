@@ -1,0 +1,33 @@
+{
+  "name": "cs_arabic_grades",
+  "description": "Arabic course titles and Arabic grade words, including a two-word grade.",
+  "department": "cs",
+  "term": "spring",
+  "transcript": [
+    "السجل الأكاديمي",
+    "اسم الطالب: طالب تجريبي",
+    "CS 101 مقدمة في الحاسب 3 ممتاز",
+    "CS 102 برمجة 1 4 جيد جداً",
+    "MATH 101 التفاضل والتكامل 3 جيد",
+    "ENG 101 لغة إنجليزية 1 3 ممتاز",
+    "ISL 101 الثقافة الإسلامية 1 2 راسب",
+    "المعدل التراكمي 3.80"
+  ],
+  "expected": {
+    "passed": [
+      "CS 101",
+      "CS 102",
+      "MATH 101",
+      "ENG 101"
+    ],
+    "failed": [
+      "ISL 101"
+    ],
+    "gpa": 3.8,
+    "in_progress": []
+  },
+  "tags": [],
+  "advisor_choice": null,
+  "verified_by": null,
+  "note": "Synthetic sample; replace or extend with real anonymised transcripts and advisor answers."
+}
